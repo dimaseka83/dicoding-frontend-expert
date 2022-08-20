@@ -3,49 +3,52 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Restaurant Apps Starter Project</title>
+  <title>Luwe Apps</title>
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="wrapper site-header__wrapper">
-      <a href="#" class="brand">Hunger Apps</a>
-      <nav class="nav">
-        <a class="nav__toggle" aria-expanded="false" type="button">
-          <i class="fa-solid fa-bars"></i>
-        </a>
-        <ul class="nav__wrapper">
-          <li class="nav__item"><a href="#">Home</a></li>
-          <li class="nav__item"><a href="#">Favorite</a></li>
-          <li class="nav__item"><a href="https://dhimasekaprasetya.netlify.app">About Us</a></li>
-        </ul>
-      </nav>
+  <a href="#content" class="skip-link">Skip to content</a>
+  <!-- Mobile Navigation -->
+  <div class="menumob">
+    <div class="iconmenu" id="menu"><a href="#">&#9776;</a></div>
+    <div class="logomob">Luwe Apps</div>
+    <div class="logomob">&nbsp;</div>
+  </div>
+  <nav id="drawer" class="navmob">
+    <ul class="navlistmob">
+      <li class="navitemsmob"><a href="#">Home</a></li>
+      <li class="navitemsmob"><a href="#">Favorite</a></li>
+      <li class="navitemsmob"><a target="_blank" href="https://dhimasekaprasetya.netlify.app/">About Us</a></li>
+    </ul>
+  </nav>
+  <!-- Desktop Navbar -->
+  <nav class="nav">
+    <a href="#" class="logo">Luwe Apps</a>
+    <ul class="navlist">
+      <li class="navitems"><a href="#">Home</a></li>
+      <li class="navitems"><a href="#">Favorite</a></li>
+      <li class="navitems"><a href="https://dhimasekaprasetya.netlify.app/" target="_blank">About Us</a></li>
+    </ul>
+  </nav>
+  <!-- Jumbotron -->
+  <div class="hero" style="background-image: linear-gradient(rgba(0,0,5,.5), rgba(0,0,5.5)), url('images/hero/hero-image_2.jpg');">
+    <div class="heroinner">
+      <h1 class="herotitle">Luwe Apps</h1>
+      <p class="herosubtitle">Find the best restaurants only on the best websites.</p>
     </div>
-  </header>
-  <main>
-    <section>
-      <img src="./images/heros/hero-image_2.jpg" alt="gambar hero" class="imgHero">
-    </section>
-    <section class="explore">
-      <h1 class="display-1">Explore Restaurant</h1>
-    </section>
+  </div>
+  <!-- Content -->
+  <main id="content">
     <section class="content">
-      <div class="grid">
-          <div class="card">
-            <div class="card-header">
-              <img src="https://restaurant-api.dicoding.dev/images/medium/41" alt="gambar menu" />
-            </div>
-            <div class="card-body">
-              <span class="tag tag-teal">Medan</span>
-              <span class="tag tag-purple">Rating 4.5</span>
-              <h4>Bring Your Phone Cafe</h4>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
-            </div>
-          </div>
-      </div>
-      
+      <div class="latest">
+        <h1>Explore Restaurant</h1>
+        <div class="container"></div>
     </section>
   </main>
+  <!-- Footer -->
+  <footer>
+    <p>Copyright © 2022 - Luwe Apps</p>
+  </footer>
 </body>
 
 </html>
