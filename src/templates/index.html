@@ -3,30 +3,27 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luwe Apps</title>
 </head>
 
 <body>
   <a href="#content" class="skip-link">Skip to content</a>
   <!-- Navbar -->
-     <nav class="navbar">
-     <!-- LOGO -->
-     <div class="logo">Luwe Apps</div>
-     <!-- NAVIGATION MENU -->
-     <ul class="nav-links">
-       <!-- USING CHECKBOX HACK -->
-       <input type="checkbox" id="checkbox_toggle" />
-       <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-       <!-- NAVIGATION MENUS -->
-       <div class="menu">
-         <li><a href="#">Home</a></li>
-         <li><a href="#">Favorite</a></li>
-         <li><a href="https://dhimasekaprasetya.netlify.app">About Us</a></li>
-       </div>
-     </ul>
-   </nav>
+  <header>
+    <nav>
+      <ul class="menu">
+        <li class="logo"><a href="#">Luwe Apps</a></li>
+        <li class="toggle"><a href="#">&#9776;</a></li>
+        <li class="item"><a href="/">Home</a></li>
+        <li class="item"><a href="#">Favorite</a></li>
+        <li class="item"><a href="https://dhimasekaprasetya.netlify.app">About us</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <!-- Jumbotron -->
-  <div class="hero" style="background-image: linear-gradient(rgba(0,0,5,.5), rgba(0,0,5.5)), url('./images/heros/hero-image_2.jpg');">
+  <div class="hero">
     <div class="heroinner">
       <h1 class="herotitle">Luwe Apps</h1>
       <p class="herosubtitle">Find the best restaurants only on the best websites.</p>
@@ -36,7 +33,8 @@
   <main id="content">
     <section class="content">
       <div class="latest">
-        <h1>Explore Restaurant</h1>
+        <h2>Explore Restaurant</h2>
+      </div>
         <div class="container"></div>
     </section>
   </main>
