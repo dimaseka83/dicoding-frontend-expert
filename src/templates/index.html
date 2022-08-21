@@ -8,30 +8,25 @@
 
 <body>
   <a href="#content" class="skip-link">Skip to content</a>
-  <!-- Mobile Navigation -->
-  <div class="menumob">
-    <div class="iconmenu" id="menu"><a href="#">&#9776;</a></div>
-    <div class="logomob">Luwe Apps</div>
-    <div class="logomob">&nbsp;</div>
-  </div>
-  <nav id="drawer" class="navmob">
-    <ul class="navlistmob">
-      <li class="navitemsmob"><a href="#">Home</a></li>
-      <li class="navitemsmob"><a href="#">Favorite</a></li>
-      <li class="navitemsmob"><a target="_blank" href="https://dhimasekaprasetya.netlify.app/">About Us</a></li>
-    </ul>
-  </nav>
-  <!-- Desktop Navbar -->
-  <nav class="nav">
-    <a href="#" class="logo">Luwe Apps</a>
-    <ul class="navlist">
-      <li class="navitems"><a href="#">Home</a></li>
-      <li class="navitems"><a href="#">Favorite</a></li>
-      <li class="navitems"><a href="https://dhimasekaprasetya.netlify.app/" target="_blank">About Us</a></li>
-    </ul>
-  </nav>
+  <!-- Navbar -->
+     <nav class="navbar">
+     <!-- LOGO -->
+     <div class="logo">Luwe Apps</div>
+     <!-- NAVIGATION MENU -->
+     <ul class="nav-links">
+       <!-- USING CHECKBOX HACK -->
+       <input type="checkbox" id="checkbox_toggle" />
+       <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+       <!-- NAVIGATION MENUS -->
+       <div class="menu">
+         <li><a href="#">Home</a></li>
+         <li><a href="#">Favorite</a></li>
+         <li><a href="https://dhimasekaprasetya.netlify.app">About Us</a></li>
+       </div>
+     </ul>
+   </nav>
   <!-- Jumbotron -->
-  <div class="hero" style="background-image: linear-gradient(rgba(0,0,5,.5), rgba(0,0,5.5)), url('images/hero/hero-image_2.jpg');">
+  <div class="hero" style="background-image: linear-gradient(rgba(0,0,5,.5), rgba(0,0,5.5)), url('./images/heros/hero-image_2.jpg');">
     <div class="heroinner">
       <h1 class="herotitle">Luwe Apps</h1>
       <p class="herosubtitle">Find the best restaurants only on the best websites.</p>
