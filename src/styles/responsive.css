@@ -1,77 +1,85 @@
-@media screen and (min-width: 500px) {
-    .menumob{
-        display: none;
+/* device (<= 320px) */
+@media only screen and(max-width: 340px){
+    nav{
+        display: flex;
+        flex-direction: row;
     }
-    .navmob{
-        display: none;
+
+    .logo-font,
+    .hero__title{
+        font-size: 1.5em;
+    }
+
+    .nav-item a,
+    .hero__subtitle,
+    .btn{
+        font-size: 1em;
     }
 }
 
-@media screen and (max-width: 500px) {
-    .nav{
+/* device (<= 600px) */
+@media only screen and (max-width: 600px){
+    .menu{
+        display: block;
+        background-color: transparent;
+        border: 1px solid transparent;
+        text-align: center;
+    }
+
+    .menu-hp{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .menu span {
+        text-align: center;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        padding: 3em 0;
+        height: 175px;
+        flex-wrap: wrap;
+    }
+
+    .nav-list{
         display: none;
     }
-    .navmob{
-        z-index: 10;
-        background-color: #fff;
-        width: 100%;
-        position: absolute;
-        -webkit-transform: translate(-100%, 0);
-        transform: translate(-100%, 0);
-        transition: all 0.3s ease-in-out;
-    }
-    .open{
-        -webkit-transform: translate(0, 0);
-        transform: translate(0, 0);
-    }
-    .navitemsmob{
-        display: list-item;
-        color: black !important;
-        width: 100%;
-        text-align: left;
+
+    .nav-list-block{
+        display: flex;
     }
 }
-    
-@media screen and (min-width: 500px) {
-    .list_item_content{
-        padding: 16px 32px 32px 32px;
+/* device (>=600px) */
+@media only screen and (min-width: 600px){
+    .main-content__title{
+        margin-bottom: 1em;
     }
-    .list_item_title{
-        font-size: 18px;
-    }
-    .list_item_desc{
-        font-size: 12px;
-    }
-}
-@media screen and (min-width:650px) {
-    .list_item_content{
-        padding: 16px 32px 32px 32px;
-    }
-    .list_item_title{
-        font-size: 18px;
-    }
-    .list_item_desc{
-        font-size: 12px;
-    }
-}
-@media screen and (min-width:700px) {
-    .container{
+
+    #explore-restaurant,
+    #fav-resto{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 16px, 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1.5em;
+        grid-row-gap: 1.5em;
     }
 }
-@media screen and (min-width:900px) {
-    .container{
+/* device (>= 768px) */
+@media only screen and (min-width: 768px){}
+/* device (>= 992px) */
+@media only screen and (min-width: 992px){
+    #explore-restaurant,
+    #fav-resto{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
-@media screen and (min-width:1200px) {
+/* device (>= 1200px) */
+@media only screen and (min-width: 1200px){
     main{
         max-width: 1200px;
     }
 }
-    
-    
-    
