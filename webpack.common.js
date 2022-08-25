@@ -1,16 +1,14 @@
-const path = require('path');
+/* eslint-disable import/no-extraneous-dependencies */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path');
+const { InjectManifest } = require('workbox-webpack-plugin');
 
 module.exports = {
-  entry: {
-    app: path.resolve(__dirname, 'src/scripts/index.js'),
-    // sw: path.resolve(__dirname, 'src/scripts/sw.js'),
-  },
+  entry: path.resolve(__dirname, 'src/scripts/index.js'),
   output: {
-    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true,
+    filename: 'bundle.js',
   },
   module: {
     rules: [
@@ -22,6 +20,9 @@ module.exports = {
           },
           {
             loader: 'css-loader',
+            options: {
+              url: false,
+            },
           },
         ],
       },
@@ -29,8 +30,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: 'index.html',
       template: path.resolve(__dirname, 'src/templates/index.html'),
+      filename: 'index.html',
+      favicon: path.resolve(__dirname, 'src/public/favicon.ico'),
     }),
     new CopyWebpackPlugin({
       patterns: [
@@ -39,6 +41,10 @@ module.exports = {
           to: path.resolve(__dirname, 'dist/'),
         },
       ],
+    }),
+    new InjectManifest({
+      swSrc: path.resolve(__dirname, 'src/scripts/utils/sw.js'),
+      swDest: 'sw.js',
     }),
   ],
 };

@@ -1,0 +1,7 @@
+/* favorite resto */
+
+#fav-resto{
+    display: grid;
+    grid-row-gap: 1.5em;
+    padding-top: 1.5em;
+}
