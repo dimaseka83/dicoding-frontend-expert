@@ -4,6 +4,7 @@ const restoDetail = (resto) => `
     <div class="detail">
         <div class="img-container">
             <img class="detail-img> alt="${resto.name}" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}"/>
+        </div>
     </div>
 
     <ul class="detail-info">
@@ -31,10 +32,11 @@ const restoDetail = (resto) => `
         </li>
     </ul>
 
-    <h3>Menu</h3>
-
-    <div class="detail-menu">
-        <div class="detail-food">
+    <h3 class="title-container">Menu</h3>
+    
+    <div class="container">
+        <div class="left">
+            <div class="detail-food">
             <h4>Food</h4>
             <ul>
                 ${resto.menus.foods
@@ -43,7 +45,8 @@ const restoDetail = (resto) => `
                 `).join('')}
             </ul>
         </div>
-
+        </div>
+        <div class="right">
         <div class="detail-drink">
             <h4>Drink</h4>
             <ul>
@@ -53,7 +56,9 @@ const restoDetail = (resto) => `
                 `).join('')}
             </ul>
         </div>
-
+        </div>
+    </div>
+    
         <h3 class="title-review">Reviews</h3>
 
         <div class="detail-review">

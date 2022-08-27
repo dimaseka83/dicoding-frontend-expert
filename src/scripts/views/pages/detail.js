@@ -15,7 +15,7 @@ const Detail = {
                     <div class="like" id="likeButtonContainer"></div>
 
                     <div id="main-container">
-                        <h2 class="title-container">Resto Detail</h2>
+                        <h2 class="title-container">Detail Restoran</h2>
 
                         <section id="detail-resto"></section>
 

@@ -1,4 +1,12 @@
 /* detail */
+.title-container{
+    display: flex;
+    font-size: 1.5em;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 1em 0;
+}
 .detail{
     display: grid;
     grid-gap: 1.5em;
@@ -64,8 +72,6 @@
     display: block;
     text-decoration: none;
     background-color: var(--primary-color);
-    border: 0.5px solid var(--secondary-color);
-    border-width: 0 0 0 0.5px;
 }
 
 .detail-drink{
@@ -80,7 +86,6 @@
     display: block;
     text-decoration: none;
     background-color: var(--primary-color);
-    border: 0.5px solid var(--secondary-color);
 }
 
 .detail-info li{
@@ -112,7 +117,7 @@
 .review-name{
     font-weight: bold;
     display: flex;
-    align-items: center;
+    align-items: left;
 }
 
 .review-date{
@@ -125,19 +130,11 @@
     text-align: left;
 }
 
-.category:hover,
-.detail-food li:hover,
-.detail-drink li:hover,
-.detail-review-item:hover{
-    box-shadow: 0px 10px 13px -7px var(--secondary-color), 5px 5px 15px 5px var(--secondary-color);
-}
 
 /* form */
 form{
     margin: 2em 0;
     padding: 1.5em;
-    border: 3px dotted var(--btn-hover);
-    border-radius: 0 15px 0 15px;
 }
 
 .form-control{
@@ -193,4 +190,18 @@ form{
 
 .like:hover{
     background-color: var(--btn-hover);
+}
+
+/* Flex Container */
+.left{
+  order: 1;
+  width:50%;
+}
+.right{
+  order: 2;
+  width:50%;
+}
+.center{
+  order: 3;
+  width:100%;
 }

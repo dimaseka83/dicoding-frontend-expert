@@ -5,7 +5,7 @@ const Favorite = {
   async render() {
     return `
         <div class="container">
-            <h2 class="title-container">Favorited Resto</h2>
+            <h2 class="title-container">Restoran Favorite</h2>
 
             <section id="fav-resto"></section>
         </div>
@@ -19,7 +19,7 @@ const Favorite = {
 
     if (data.length === 0) {
       favRestoContainer.innerHTML = `
-            Empty favorite Resto. Put one, by clicking heart button in the detail page.
+            Tidak ada restoran yang di favoritkan, Pilih restoran yang ingin di favoritkan dengan klik tombol hati di detail restoran.
             `;
     }
 
