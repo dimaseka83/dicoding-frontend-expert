@@ -8,7 +8,7 @@ class Navbar extends HTMLElement {
             <nav>
                 <div class="menu-hp">
                     <div>
-                        <a href="/" class="logo-font">Resto</a>
+                        <a href="/" class="logo-font">Luwe Apps</a>
                     </div>
 
                     <div class="menu-container">

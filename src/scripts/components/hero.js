@@ -6,10 +6,10 @@ class HeroContent extends HTMLElement {
   render() {
     this.innerHTML = `
         <div tabindex="0" class="hero__text">
-        <h1 class="hero__title">Welcome to Resto</h1>
+        <h1 class="hero__title">Selamat Datang di Luwe Apps</h1>
 
         <p class="hero__subtitle">
-          Our restaurants offer more than just great food
+          Makanan millenial masa kini
         </p>
 
         <a href="#main-content" class="btn">Read More</a>

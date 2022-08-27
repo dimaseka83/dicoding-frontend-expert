@@ -1,22 +1,23 @@
-import CONFIG from "../../globals/config";
+import CONFIG from '../../globals/config';
 
 const restoCard = (resto) => `
-    <div tabindex="0" class="card">
-        <a href="#/resto/${resto.id}" class="card-a-tag">
-            <div class="img-container">
-                <img tabindex="0" class="card-image" crossorigin="anonymous" alt="${resto.name}" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}"/>
-                <span tabIndex="0" class="card-rating">
-                    <i title="ratings" class="fa fa-star"></i>
-                    <span>${resto.rating}</span>
-                </span>
-            </div>
-
-            <div tabindex="0" class="card-content">
-                <h2 class="card-content-title">${resto.name} - ${resto.city}</h2>
-                <p class="truncate">${resto.description}</p>
-            </div>
-        </a>
+    <div class="card" tabindex="0">
+    <a href="#/resto/${resto.id}" class="card-header">
+      <img src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="${resto.name}" title="${resto.name}"/>
+    </a>
+    <div class="card-body">
+      <span class="tag tag-teal">${resto.city}</span>
+      <h4>${resto.name}</h4>
+      <p class="limitText">${resto.description}</p>
+      <div class="user">
+        <div class="user-info">
+          <h5>
+          <i title="ratings" class="fa fa-star"></i>
+          Rating ${resto.rating}</h5>
+        </div>
+      </div>
     </div>
+  </div>
 `;
 
-export default restoCard
+export default restoCard;

@@ -1,12 +1,12 @@
 :root {
     --primary-color: #ffffff;
-    --secondary-color: #f0e3ca;
+    --secondary-color: #BBDEFB;
     --font-color: #1b1a17;
-    --btn: #ff8303;
-    --btn-hover: #a35709;
+    --btn: #2196F3;
+    --btn-hover: #42A5F5;
     --image-color: linear-gradient(
         1deg,
-        rgb(255 207 126 / 40%) 3%,
+        rgba(3, 169, 244, 0.4) 3%,
         rgb(0 0 0 / 40%) 30%
     );
 }
@@ -61,6 +61,7 @@ body{
     font-size: large;
     cursor: pointer;
     text-decoration: none;
+    border-radius: 0.25rem;
 }
 
 .submit-btn{
