@@ -1,5 +1,8 @@
 import RestaurantSource from "../../data/restaurant-source";
+import { initError } from "../../utils/swal-initiator";
 import Card from "../templates/card";
+import Spinner from "../templates/spinner";
+
 
 const Home = {
     async render() {
@@ -15,11 +18,12 @@ const Home = {
     },
 
     async afterRender(){
+        const loading = document.querySelector('#loading');
         const mainContainer = document.querySelector('#main-container');
         const listRestaurant = document.querySelector('#explore-restaurant');
 
         mainContainer.style.display = 'none';
-
+        loading.innerHTML = Spinner();
         try {
             const data = await RestaurantSource.getResto();
 
@@ -30,6 +34,10 @@ const Home = {
             mainContainer.style.display = 'block';
         } catch (error) {
             console.log(error);
+
+            mainContainer.style.display = 'block';
+            loading.style.display = 'none';
+            initError(error);
         }
     }
 }

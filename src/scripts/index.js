@@ -1,19 +1,25 @@
 import 'regenerator-runtime'; /* for async await transpile */
+import '../styles/responsive.css';
 import '../styles/main.css';
 import '../styles/appbar.css';
-import '../styles/responsive.css';
+import '../styles/card.css';
 import App from './views/app';
 
 // components
 import './components/appbar';
+import './components/hero';
+import './components/footer';
 
 const app = new App({
-  button: document.querySelector('#hamburgerButton'),
-  drawer: document.querySelector('#navigationDrawer'),
+  toggle: document.querySelector('.toggle'),
+  menu: document.querySelector('.menu'),
   content: document.querySelector('#mainContent'),
 });
 
-window.addEventListener('hashchange', async () => {
-  document.querySelector('.container').scrollIntoView();
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
+
+window.addEventListener('load', () => {
   app.renderPage();
 });

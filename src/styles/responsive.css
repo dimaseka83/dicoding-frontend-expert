@@ -1,109 +1,96 @@
-@media screen and (min-width: 500px) {
-    .menumob{
-        display: none;
+/* device (<= 320px) */
+@media only screen and(max-width: 340px){
+    nav{
+        display: flex;
+        flex-direction: row;
     }
-    .navmob{
-        display: none;
+
+    .logo-font,
+    .hero__title{
+        font-size: 1.5em;
+    }
+
+    .nav-item a,
+    .hero__subtitle,
+    .btn{
+        font-size: 1em;
     }
 }
 
-@media screen and (max-width: 500px) {
-    .nav{
-        display: none;
-    }
-    .navmob{
-        z-index: 10;
-        background-color: #fff;
-        width: 100%;
-        position: absolute;
-        -webkit-transform: translate(-100%, 0);
-        transform: translate(-100%, 0);
-        transition: all 0.3s ease-in-out;
-    }
-    .open{
-        -webkit-transform: translate(0, 0);
-        transform: translate(0, 0);
-    }
-    .navitemsmob{
-        display: list-item;
-        color: black !important;
-        width: 100%;
-        text-align: left;
-    }
-}
-    
-@media screen and (min-width: 500px) {
-    .list_item_content{
-        padding: 16px 32px 32px 32px;
-    }
-    .list_item_title{
-        font-size: 18px;
-    }
-    .list_item_desc{
-        font-size: 12px;
-    }
-}
-@media screen and (min-width:650px) {
-    .list_item_content{
-        padding: 16px 32px 32px 32px;
-    }
-    .list_item_title{
-        font-size: 18px;
-    }
-    .list_item_desc{
-        font-size: 12px;
-    }
+/* device (<= 600px) */
+@media only screen and (max-width: 600px){
 
-      .app-bar {
-    grid-template-columns: 1fr auto;
-    padding: 8px 32px;
-  }
- 
-  .app-bar .app-bar__brand h1 {
-    font-size: 1.5em;
-  }
- 
-  .app-bar .app-bar__menu {
-    display: none;
-  }
- 
-  .app-bar .app-bar__navigation {
-    position: static;
-    width: 100%;
-  }
- 
-  .app-bar .app-bar__navigation ul li {
-    display: inline-block;
-  }
- 
-  .app-bar .app-bar__navigation ul li a {
-    display: inline-block;
-    width: 120px;
-    text-align: center;
-    margin: 0;
-  }
 }
-@media screen and (min-width:700px) {
-    .container{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 16px, 10px;
-    }
-    .app-bar .app-bar__brand h1 {
-        font-size: 2em;
+/* device (>=600px) */
+@media only screen and (min-width: 600px){
+    .menu {
+        justify-content: center;
       }
-}
-@media screen and (min-width:900px) {
-    .container{
+      .logo {
+        flex: 1;
+      }
+      .item.button {
+        width: auto;
+        order: 1;
+        display: block;
+      }
+      .toggle {
+        flex: 1;
+        text-align: right;
+        order: 2;
+      }
+      /* Button up from tablet screen */
+      .menu li.button a {
+        padding: 10px 15px;
+        margin: 5px 0;
+      }
+      .button a {
+        background: #0080ff;
+        border: 1px royalblue solid;
+      }
+      .button.secondary {
+        border: 0;
+      }
+      .button.secondary a {
+        background: transparent;
+        border: 1px #0080ff solid;
+      }
+      .button a:hover {
+        text-decoration: none;
+      }
+      .button:not(.secondary) a:hover {
+        background: royalblue;
+        border-color: darkblue;
+      }
+
+    .main-content__title{
+        margin-bottom: 1em;
+    }
+
+    #explore-restaurant,
+    #fav-resto{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1.5em;
+        grid-row-gap: 1.5em;
     }
 }
-@media screen and (min-width:1200px) {
+/* device (>= 768px) */
+@media only screen and (min-width: 768px){
+    
+}
+/* device (>= 992px) */
+@media only screen and (min-width: 992px){
+
+    #explore-restaurant,
+    #fav-resto{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+/* device (>= 1200px) */
+@media only screen and (min-width: 1200px){
     main{
         max-width: 1200px;
     }
 }
-    
-    
-    

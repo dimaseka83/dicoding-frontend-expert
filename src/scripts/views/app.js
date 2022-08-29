@@ -1,11 +1,11 @@
-import routes from '../routes/routes';
-import UrlParser from '../routes/url-parser';
 import DrawerInitiator from '../utils/drawer-initiator';
+import UrlParser from '../routes/url-parser';
+import routes from '../routes/routes';
 
 class App {
-  constructor({ button, drawer, content }) {
-    this._button = button;
-    this._drawer = drawer;
+  constructor({ toggle, menu, content }) {
+    this._toggle = toggle;
+    this._menu = menu;
     this._content = content;
 
     this._initialAppShell();
@@ -13,15 +13,14 @@ class App {
 
   _initialAppShell() {
     DrawerInitiator.init({
-      button: this._button,
-      drawer: this._drawer,
+      toggle: this._toggle,
+      menu: this._menu,
       content: this._content,
     });
   }
 
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
-    console.log("url", url);
     const page = routes[url];
     this._content.innerHTML = await page.render();
     await page.afterRender();

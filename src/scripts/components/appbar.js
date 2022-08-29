@@ -5,24 +5,17 @@ class AppBar extends HTMLElement {
 
   render() {
     this.innerHTML = `
-        <header class="app-bar">
-        <div class="app-bar__menu">
-          <button id="hamburgerButton">☰</button>
-        </div>
-        <div class="app-bar__brand">
-          <h1>Luwe Apps</h1>
-        </div>
-        <nav id="navigationDrawer" class="app-bar__navigation">
-          <ul>
-          <li class="nav-item"><a href="/">Home</a></li>
-          <li class="nav-item"><a href="#/favorite">Favorite</a></li>
-          <li class="nav-item">
-              <a href="https://dhimasekaprasetya.netlify.app" target="_blank"
-              rel="noopener noreferrer">About</a>
-          </li>
-          </ul>
-        </nav>
-      </header>
+    <header>
+    <nav id="navigationDrawer">
+      <ul class="menu">
+        <li class="logo"><a href="#">Luwe Apps</a></li>
+        <li class="toggle"><a href="#">&#9776;</a></li>
+        <li class="item"><a href="/">Home</a></li>
+        <li class="item"><a href="#">Favorite</a></li>
+        <li class="item"><a href="https://dhimasekaprasetya.netlify.app">About us</a></li>
+      </ul>
+    </nav>
+  </header>
         `;
   }
 }

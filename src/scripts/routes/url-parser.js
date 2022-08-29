@@ -11,11 +11,11 @@ const UrlParser = {
   },
 
   _urlSplitter(url) {
-    const urlSplits = url.split('/');
+    const urlsSplits = url.split('/');
     return {
-      resource: urlSplits[1] || null,
-      id: urlSplits[2] || null,
-      verb: urlSplits[3] || null,
+      resource: urlsSplits[1] || null,
+      id: urlsSplits[2] || null,
+      verb: urlsSplits[3] || null,
     };
   },
 
