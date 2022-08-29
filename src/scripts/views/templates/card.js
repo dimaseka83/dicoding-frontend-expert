@@ -1,6 +1,6 @@
 import CONFIG from '../../globals/config';
 
-const card = (resto) => `
+const Card = (resto) => `
 <div class="card" tabindex="0">
 <a href="#/resto/${resto.id}" class="card-header">
   <img src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="${resto.name}" title="${resto.name}"/>
@@ -20,4 +20,4 @@ const card = (resto) => `
 </div>
 `;
 
-export default card;
+export default Card;

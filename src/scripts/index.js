@@ -14,5 +14,6 @@ const app = new App({
 });
 
 window.addEventListener('hashchange', async () => {
-  await app.renderPage();
+  document.querySelector('.container').scrollIntoView();
+  app.renderPage();
 });
