@@ -3,7 +3,9 @@ import '../styles/responsive.css';
 import '../styles/main.css';
 import '../styles/appbar.css';
 import '../styles/card.css';
+import '../styles/detail.css';
 import App from './views/app';
+import swRegister from './utils/sw-register';
 
 // components
 import './components/appbar';
@@ -22,4 +24,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
 });
