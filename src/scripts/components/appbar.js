@@ -11,7 +11,7 @@ class AppBar extends HTMLElement {
         <li class="logo"><a href="#">Luwe Apps</a></li>
         <li class="toggle"><a href="#">&#9776;</a></li>
         <li class="item"><a href="/">Home</a></li>
-        <li class="item"><a href="#">Favorite</a></li>
+        <li class="item"><a href="#/favorite">Favorite</a></li>
         <li class="item"><a href="https://dhimasekaprasetya.netlify.app">About us</a></li>
       </ul>
     </nav>

@@ -1,7 +1,7 @@
-import Swal from 'sweetalert';
+import swal from 'sweetalert';
 
 const initSuccess = (message) => {
-  Swal.fire({
+  swal({
     icon: 'success',
     title: 'Success',
     text: message,
@@ -10,12 +10,12 @@ const initSuccess = (message) => {
 };
 
 const initError = (message) => {
-  Swal.fire({
+  swal({
     icon: 'error',
     title: 'Oops...',
     text: message,
     confirmButtonText: 'OK',
-  });
+  }); 
 };
 
 export { initSuccess, initError };
