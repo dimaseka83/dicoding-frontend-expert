@@ -12,7 +12,7 @@ const Detail = {
             <div>
               <div id="loading"></div>
               <div id="like" class="like"></div>
-              <div id="mainContainer">
+              <div id="mainContainer"> 
                 <div id="restaurant" class="restaurant"></div>
                 <form-reviews></form-reviews>
               </div>
