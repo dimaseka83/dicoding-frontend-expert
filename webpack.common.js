@@ -5,7 +5,7 @@ const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
   entry: {
-    // app: path.resolve(__dirname, 'src/scripts/index.js'),
+    app: path.resolve(__dirname, 'src/scripts/index.js'),
     // sw: path.resolve(__dirname, 'src/scripts/sw.js'),
   },
   output: {

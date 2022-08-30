@@ -11,6 +11,16 @@ const createDetailTemplate = (restaurant) => `
         <div class="card__header-text_edit">
           <h3 class="card__title_edit">${restaurant.name}</h3>            
           <span class="card__status_edit">
+            <div class="user_edit">
+                <div class="user-info_edit">
+                <h5>
+                <i title="ratings" class="fa fa-star"></i>
+                Rating ${restaurant.rating}</h5>
+                <h5>
+                <i title="ratings" class="fas fa-map-marker-alt"></i>
+                 ${restaurant.address}, ${restaurant.city}</h5>
+                </div>
+            </div>
           <div class="restaurant__categories__list">
               ${restaurant.categories.map((category) => `<span class="restaurant__categories__item">${category.name}</span>`).join('')}
           </div>
@@ -23,53 +33,31 @@ const createDetailTemplate = (restaurant) => `
 </li>  
 </ul>
 
-    <h2 class="restaurant__title">${restaurant.name}</h2>
-    <img class="restaurant__poster" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
-    <div class="restaurant__info">
-        <h3>Information</h3>
-        <h4>City</h4>
-        <p>${restaurant.city}</p>
-        <h4>Address</h4>
-        <p>${restaurant.address}</p>
-        <h4>Rating</h4>
-        <p>${restaurant.rating}</p>
+<div class="main-container">
+  <div class="heading">
+    <h1 class="heading__title">Menu Makanan</h1>
+  </div>
+  <div class="cards_food">
+    <div class="card_food card-1_food">
+      <div class="card__icon_food"><i class="fa-solid fa-pizza-slice"></i></div>
+      <h2 class="card__title_food">
+        ${restaurant.menus.foods.map((food) => `<p class="restaurant__menus__foods__item">${food.name}</p>`).join('')}
+      </h2>
+      <p class="card__apply_food">
+        <a class="card__link_food" href="#">Pesan Makanan Sekarang <i class="fas fa-arrow-right"></i></a>
+      </p>
     </div>
-    <div class="restaurant__overview">
-        <h3>Overview</h3>
-        <h4>Description</h4>
-        <p>${restaurant.description}</p>
+    <div class="card_food card-2_food">
+      <div class="card__icon_food"><i class="fa-solid fa-champagne-glasses"></i></div>
+      <h2 class="card__title_food">
+        ${restaurant.menus.drinks.map((drink) => `<p class="restaurant__menus__drinks__item">${drink.name}</p>`).join('')}
+      </h2>
+      <p class="card__apply_food">
+        <a class="card__link_food" href="#">Pesan Minuman Sekarang <i class="fas fa-arrow-right"></i></a>
+      </p>
     </div>
-    <div class="restaurant__categories">
-        <h3>Categories</h3>
-
-    </div>
-    <div class="restaurant__menus">
-        <h3>Menu</h3>
-        <div class="restaurant__menus__foods">
-            <h4>Foods</h4>
-            <div class="restaurant__menus__foods__list">
-                ${restaurant.menus.foods.map((food) => `<span class="restaurant__menus__foods__item">${food.name}</span>`).join('')}
-            </div>
-        </div>
-        <div class="restaurant__menus__drinks">
-            <h4>Drinks</h4>
-            <div class="restaurant__menus__drinks__list">
-                ${restaurant.menus.drinks.map((drink) => `<span class="restaurant__menus__drinks__item">${drink.name}</span>`).join('')}
-            </div>
-        </div>
-    </div>
-    <div class="restaurant__customer-reviews">
-        <h3>Customer Reviews</h3>
-        <div class="restaurant__customer-reviews__list">
-            ${restaurant.customerReviews.map((review) => `
-                <div class="restaurant__customer-reviews__item">
-                    <p class="restaurant__customer-reviews__item__name">${review.name}</p>
-                    <p class="restaurant__customer-reviews__item__date">${review.date}</p>
-                    <p class="restaurant__customer-reviews__item__review">${review.review}</p>
-                </div>
-            `).join('')}
-        </div>
-    </div>
+  </div>
+</div>
     `;
 
 export default createDetailTemplate;

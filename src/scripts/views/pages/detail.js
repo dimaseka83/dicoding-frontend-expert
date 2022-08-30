@@ -6,6 +6,9 @@ import createDetailTemplate from '../templates/detail';
 import Spinner from '../templates/spinner';
 import PostFormReview from '../../utils/post-form-review';
 
+// Components
+import '../../components/reviews';
+
 const Detail = {
   async render() {
     return `
@@ -14,6 +17,7 @@ const Detail = {
               <div id="like" class="like"></div>
               <div id="mainContainer"> 
                 <div id="restaurant" class="restaurant"></div>
+                <reviews-list></reviews-list>
                 <form-reviews></form-reviews>
               </div>
             </div>
@@ -39,6 +43,8 @@ const Detail = {
       });
       this._submitReview(url.id);
 
+      this._review(restaurant.restaurant.customerReviews);
+
       mainContainer.style.display = 'block';
       loading.style.display = 'none';
 
@@ -48,6 +54,54 @@ const Detail = {
       restaurantDetail.innerHTML = '<h1>Restaurant not found</h1>';
       initError(error.message);
     }
+  },
+
+  _review(reviews) {
+    // local reviews data
+    const customerReviews = reviews;
+
+
+    const name = document.getElementById("author_review");
+    const date = document.getElementById("job_review");
+    const review = document.getElementById("info_review");
+
+    const prevBtn = document.querySelector(".prev-btn_review");
+    const nextBtn = document.querySelector(".next-btn_review");
+
+let currentItem = 0;
+
+// load initial item
+    setTimeout(() => {
+          const item = customerReviews[currentItem];
+          name.textContent = item.name;
+          date.textContent = item.date;
+          review.textContent = item.review;
+    }, 500);
+// show person based on item
+function showPerson(person) {
+  const item = customerReviews[person];
+  name.textContent = item.name;
+  date.textContent = item.date;
+  review.textContent = item.review;
+}
+
+// show next person
+nextBtn.addEventListener("click", () => {
+  currentItem++;
+  if (currentItem > customerReviews.length - 1) {
+    currentItem = 0;
+  }
+  showPerson(currentItem);
+});
+
+// show prev person
+prevBtn.addEventListener("click", () => {
+  currentItem--;
+  if (currentItem < 0) {
+    currentItem = customerReviews.length - 1;
+  }
+  showPerson(currentItem);
+});
   },
 
   _submitReview(id) {
