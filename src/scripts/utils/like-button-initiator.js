@@ -17,20 +17,20 @@ const LikeButtonInitiator = {
   },
 
   async _renderButton() {
-   try {
-    const { id } = this._restaurant;
-    
-    if (await this._isRestaurantLiked(id)) {
-      this._renderLiked();
-    } else {
-      this._renderLike();
-    }
-   } catch (error) {
+    try {
+      const { id } = this._restaurant;
+
+      if (await this._isRestaurantLiked(id)) {
+        this._renderLiked();
+      } else {
+        this._renderLike();
+      }
+    } catch (error) {
       console.log(error);
       initError(error.message);
 
       throw new Error(error);
-   }
+    }
   },
 
   async _isRestaurantLiked(id) {

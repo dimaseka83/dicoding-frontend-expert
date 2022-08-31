@@ -1,10 +1,10 @@
-class Reviews extends HTMLElement{
-    connectedCallback(){
-        this.render();
-    }
+class Reviews extends HTMLElement {
+  connectedCallback() {
+    this.render();
+  }
 
-    render(){
-        this.innerHTML = `
+  render() {
+    this.innerHTML = `
         <main class="main_review">
   <section class="container_review">
 
@@ -35,7 +35,7 @@ class Reviews extends HTMLElement{
   </section>
 </main>
         `;
-    }
+  }
 }
 
 customElements.define('reviews-list', Reviews);

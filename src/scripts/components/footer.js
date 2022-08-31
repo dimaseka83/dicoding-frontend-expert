@@ -1,16 +1,16 @@
 class Footer extends HTMLElement {
-    connectedCallback(){
-        this.render();
-    }
+  connectedCallback() {
+    this.render();
+  }
 
-    render(){
-        let year = new Date().getFullYear();
-        this.innerHTML = `
+  render() {
+    const year = new Date().getFullYear();
+    this.innerHTML = `
         <footer>
         <p>Copyright © ${year} - Luwe Apps</p>
       </footer>
         `;
-    }
+  }
 }
 
 customElements.define('footer-bar', Footer);

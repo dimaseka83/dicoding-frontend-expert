@@ -44,7 +44,7 @@ const createDetailTemplate = (restaurant) => `
         ${restaurant.menus.foods.map((food) => `<p class="restaurant__menus__foods__item">${food.name}</p>`).join('')}
       </h2>
       <p class="card__apply_food">
-        <a class="card__link_food" href="#">Pesan Makanan Sekarang <i class="fas fa-arrow-right"></i></a>
+        <span class="card__link_food">Pesan Makanan Sekarang <i class="fas fa-arrow-right"></i></span>
       </p>
     </div>
     <div class="card_food card-2_food">
@@ -53,7 +53,7 @@ const createDetailTemplate = (restaurant) => `
         ${restaurant.menus.drinks.map((drink) => `<p class="restaurant__menus__drinks__item">${drink.name}</p>`).join('')}
       </h2>
       <p class="card__apply_food">
-        <a class="card__link_food" href="#">Pesan Minuman Sekarang <i class="fas fa-arrow-right"></i></a>
+        <span class="card__link_food">Pesan Minuman Sekarang <i class="fas fa-arrow-right"></i></span>
       </p>
     </div>
   </div>

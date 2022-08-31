@@ -1,6 +1,7 @@
 import * as WorkboxWindow from 'workbox-window';
+
 const swRegister = async () => {
-  if (!('serviceWorker') in navigator) {
+  if (!('serviceWorker' in navigator)) {
     console.log('Service worker not supported');
     return;
   }
@@ -15,4 +16,3 @@ const swRegister = async () => {
   }
 };
 export default swRegister;
-

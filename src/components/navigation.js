@@ -1,10 +1,10 @@
-class Navigation extends HTMLElement{
-    connectedCallback() {
-        this.render();
-    }
+class Navigation extends HTMLElement {
+  connectedCallback() {
+    this.render();
+  }
 
-    render() {
-        this.innerHTML = `
+  render() {
+    this.innerHTML = `
           <a href="#content" class="skip-link">Skip to content</a>
 
   <header>
@@ -17,8 +17,8 @@ class Navigation extends HTMLElement{
         <li class="item"><a href="https://dhimasekaprasetya.netlify.app">About us</a></li>
       </ul>
     </nav>
-  </header>`
-    }
+  </header>`;
+  }
 }
 
 customElements.define('navigation-component', Navigation);

@@ -15,7 +15,7 @@ const initError = (message) => {
     title: 'Oops...',
     text: message,
     confirmButtonText: 'OK',
-  }); 
+  });
 };
 
 export { initSuccess, initError };

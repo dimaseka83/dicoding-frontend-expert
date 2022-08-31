@@ -47,7 +47,6 @@ const Detail = {
 
       mainContainer.style.display = 'block';
       loading.style.display = 'none';
-
     } catch (error) {
       console.log(error);
       loading.style.display = 'none';
@@ -60,48 +59,47 @@ const Detail = {
     // local reviews data
     const customerReviews = reviews;
 
+    const name = document.getElementById('author_review');
+    const date = document.getElementById('job_review');
+    const review = document.getElementById('info_review');
 
-    const name = document.getElementById("author_review");
-    const date = document.getElementById("job_review");
-    const review = document.getElementById("info_review");
+    const prevBtn = document.querySelector('.prev-btn_review');
+    const nextBtn = document.querySelector('.next-btn_review');
 
-    const prevBtn = document.querySelector(".prev-btn_review");
-    const nextBtn = document.querySelector(".next-btn_review");
+    let currentItem = 0;
 
-let currentItem = 0;
-
-// load initial item
+    // load initial item
     setTimeout(() => {
-          const item = customerReviews[currentItem];
-          name.textContent = item.name;
-          date.textContent = item.date;
-          review.textContent = item.review;
+      const item = customerReviews[currentItem];
+      name.textContent = item.name;
+      date.textContent = item.date;
+      review.textContent = item.review;
     }, 500);
-// show person based on item
-function showPerson(person) {
-  const item = customerReviews[person];
-  name.textContent = item.name;
-  date.textContent = item.date;
-  review.textContent = item.review;
-}
+    // show person based on item
+    function showPerson(person) {
+      const item = customerReviews[person];
+      name.textContent = item.name;
+      date.textContent = item.date;
+      review.textContent = item.review;
+    }
 
-// show next person
-nextBtn.addEventListener("click", () => {
-  currentItem++;
-  if (currentItem > customerReviews.length - 1) {
-    currentItem = 0;
-  }
-  showPerson(currentItem);
-});
+    // show next person
+    nextBtn.addEventListener('click', () => {
+      currentItem++;
+      if (currentItem > customerReviews.length - 1) {
+        currentItem = 0;
+      }
+      showPerson(currentItem);
+    });
 
-// show prev person
-prevBtn.addEventListener("click", () => {
-  currentItem--;
-  if (currentItem < 0) {
-    currentItem = customerReviews.length - 1;
-  }
-  showPerson(currentItem);
-});
+    // show prev person
+    prevBtn.addEventListener('click', () => {
+      currentItem--;
+      if (currentItem < 0) {
+        currentItem = customerReviews.length - 1;
+      }
+      showPerson(currentItem);
+    });
   },
 
   _submitReview(id) {
@@ -113,7 +111,7 @@ prevBtn.addEventListener("click", () => {
       e.preventDefault();
       await PostFormReview(id, name.value, review.value);
     });
-  }
+  },
 };
 
 export default Detail;

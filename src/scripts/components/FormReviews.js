@@ -1,10 +1,10 @@
 class FormReviews extends HTMLElement {
-    connectedCallback() {
-        this.render();
-    }
+  connectedCallback() {
+    this.render();
+  }
 
-    render() {
-        this.innerHTML = `
+  render() {
+    this.innerHTML = `
         <div class="review__form">
         <h3>Add Review</h3>
         <form id="formReview">
@@ -20,7 +20,7 @@ class FormReviews extends HTMLElement {
         </form>
     </div>
         `;
-    }
+  }
 }
 
 customElements.define('form-reviews', FormReviews);

@@ -10,6 +10,7 @@ const DrawerInitiator = {
   },
 
   _toggleDrawer(event, menu) {
+    event.preventDefault();
     event.stopPropagation();
     menu.classList.toggle('active');
   },
