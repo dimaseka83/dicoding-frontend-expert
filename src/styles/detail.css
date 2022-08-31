@@ -406,6 +406,10 @@ body {
   }
 }
 
+.review__form{
+  margin: 20px 0;
+}
+
 .pinfo {
  margin: 8px auto;
  font-weight: bold;
