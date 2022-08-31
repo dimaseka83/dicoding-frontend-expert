@@ -13,12 +13,12 @@ const createDetailTemplate = (restaurant) => `
           <span class="card__status_edit">
             <div class="user_edit">
                 <div class="user-info_edit">
-                <h5>
+                <h1>
                 <i title="ratings" class="fa fa-star"></i>
-                Rating ${restaurant.rating}</h5>
-                <h5>
+                Rating ${restaurant.rating}</h1>
+                <p>
                 <i title="ratings" class="fas fa-map-marker-alt"></i>
-                 ${restaurant.address}, ${restaurant.city}</h5>
+                 ${restaurant.address}, ${restaurant.city}</p>
                 </div>
             </div>
           <div class="restaurant__categories__list">
