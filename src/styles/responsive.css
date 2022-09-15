@@ -15,11 +15,17 @@
     .btn{
         font-size: 1em;
     }
+
+    .hero{
+      background-image: linear-gradient(rgba(0,0,5,.5), rgba(0,0,5.5)), url('./images/heros/hero-400.jpg');
+    }
 }
 
 /* device (<= 600px) */
 @media only screen and (max-width: 600px){
-
+  .hero{
+    background-image: linear-gradient(rgba(0,0,5,.5), rgba(0,0,5.5)), url('./images/heros/hero-600.jpg');
+  }
 }
 /* device (>=600px) */
 @media only screen and (min-width: 600px){
@@ -63,6 +69,10 @@
         border-color: darkblue;
       }
 
+      .hero{
+        background-image: linear-gradient(rgba(0,0,5,.5), rgba(0,0,5.5)), url('./images/heros/hero-600.jpg');
+      }
+
     .main-content__title{
         margin-bottom: 1em;
     }
@@ -87,11 +97,19 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    .hero{
+        background-image: linear-gradient(rgba(0,0,5,.5), rgba(0,0,5.5)), url('./images/heros/hero-1000.jpg');
+    }
 }
 /* device (>= 1200px) */
 @media only screen and (min-width: 1200px){
     main{
         max-width: 1200px;
+    }
+
+    .hero{
+        background-image: linear-gradient(rgba(0,0,5,.5), rgba(0,0,5.5)), url('./images/heros/hero-1200.jpg');
     }
 }
 

@@ -2,6 +2,9 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
+const { default: ImageminWebpackPlugin } = require('imagemin-webpack-plugin');
+const imageminMozjpeg = require('imagemin-mozjpeg');
+const imageminPngquant = require('imagemin-pngquant');
 
 module.exports = {
   entry: {
@@ -23,6 +26,9 @@ module.exports = {
           },
           {
             loader: 'css-loader',
+            options: {
+              url: false,
+            }
           },
         ],
       },
@@ -38,11 +44,25 @@ module.exports = {
         {
           from: path.resolve(__dirname, 'src/public/'),
           to: path.resolve(__dirname, 'dist/'),
+          globOptions: {
+            ignore: ['**/images/heros**'],
+          },
         },
       ],
     }),
     new WorkboxWebpackPlugin.GenerateSW({
       swDest: './sw.bundle.js',
     }),
+    new ImageminWebpackPlugin({
+      plugins: [
+        imageminMozjpeg({
+          quality: 50,
+          progressive: true,
+        }),
+        imageminPngquant({
+          quality: [0.6, 0.8],
+        })
+      ]
+    })
   ],
 };
