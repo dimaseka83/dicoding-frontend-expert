@@ -3,7 +3,7 @@ import CONFIG from '../../globals/config';
 const Card = (resto) => `
 <div class="card" tabindex="0">
 <a href="#/resto/${resto.id}" class="card-header">
-  <img class="lazyload" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="${resto.name}" title="${resto.name}"/>
+  <img class="lazyload" data-src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="${resto.name}" title="${resto.name}"/>
 </a>
 <div class="card-body">
   <span class="tag tag-teal">${resto.city}</span>
