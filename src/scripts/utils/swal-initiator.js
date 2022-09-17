@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unresolved
 import swal from 'sweetalert';
 
 const initSuccess = (message) => {
@@ -6,6 +7,7 @@ const initSuccess = (message) => {
     title: 'Success',
     text: message,
     confirmButtonText: 'OK',
+    timer: 1000,
   });
 };
 
@@ -15,6 +17,7 @@ const initError = (message) => {
     title: 'Oops...',
     text: message,
     confirmButtonText: 'OK',
+    timer: 1000,
   });
 };
 

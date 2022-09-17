@@ -17,6 +17,6 @@
         "no-plusplus": "off",
         "linebreak-style": "off",
         "operator-linebreak": "off",
-        "no-unexpected-multiline": "off",
+        "no-unexpected-multiline": "off"
     }
 }

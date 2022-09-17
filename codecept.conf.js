@@ -15,11 +15,10 @@ exports.config = {
       url: 'http://localhost:8080',
       show: true,
       windowSize: '1200x900',
-      waitForAction: 1000,
-    }
+    },
   },
   include: {
-    I: './steps_file.js'
+    I: './steps_file.js',
   },
-  name: 'dicoding-frontend-expert'
-}
+  name: 'dicoding-frontend-expert',
+};

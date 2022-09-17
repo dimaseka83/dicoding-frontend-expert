@@ -4,7 +4,7 @@ const createDetailTemplate = (restaurant) => `
 <ul class="cards_edit">
 <li>
   <a href="" class="card_edit">
-    <img src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" class="card__image_edit" />
+    <img src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" class="card__image_edit lazyload" />
     <div class="card__overlay_edit">
       <div class="card__header_edit">
         <svg class="card__arc_edit" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
